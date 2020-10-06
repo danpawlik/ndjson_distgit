@@ -3,13 +3,13 @@
 %global pypi_name ndjson
 
 Name:           python3-ndjson
-Version:        0.3.1
+Version:        0.3.0
 Release:        1%{?dist}
 Summary:        ndjson parser
 
 License:        GPL3
 URL:            https://github.com/rhgrant10/ndjson
-Source0:        https://pypi.io/packages/source/%(c=%{pypi_name}; echo )/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://github.com/rhgrant10/ndjson/archive/v%{version}.tar.gz
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -31,5 +31,5 @@ CFLAGS="" %{__python3} setup.py build
 %{python3_sitelib}/*
 
 %changelog
-* Tue Oct 06 2020 Daniel Pawlik <dpawlik@redhat.com> - 0.3.1-1
+* Tue Oct 06 2020 Daniel Pawlik <dpawlik@redhat.com> - 0.3.0-1
 - Initial packaging
